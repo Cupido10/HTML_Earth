@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <style type="text/css">
+         
+        @-webkit-keyframes starPulse{
+            from{opacity: 1;}
+            to{opacity: 0.2;}
+        }
+        
+        @-moz-keyframes starPulse{
+            from{opacity: 1;}
+            to{opacity: 0.2;}
+        }
+        
+        @-o-keyframes starPulse{
+            from{opacity: 1;}
+            to{opacity: 0.2;}
+        }
+        
+        @keyframes starPulse{
+            from{opacity: 1;}
+            to{opacity: 0.2;}
+        }
+        
+        @-webkit-keyframes sunFire{
+            form{
+                -webkit-box-shadow:0 0 50px #f5c91a;
+                -moz-box-shadow:0 0 50px #f5c91a;
+                -o-box-shadow:0 0 50px #f5c91a;
+                box-shadow:0 0 50px #f5c91a;
+            }
+            to{
+                -webkit-box-shadow:0 0 100px #f5c91a;
+                -moz-box-shadow:0 0 100px #f5c91a;
+                -o-box-shadow:0 0 100px #f5c91a;
+                box-shadow:0 0 100px #f5c91a;
+            }
+        }
+        
+        @-moz-keyframes sunFire{
+            form{
+                -webkit-box-shadow:0 0 50px #f5c91a;
+                -moz-box-shadow:0 0 50px #f5c91a;
+                -o-box-shadow:0 0 50px #f5c91a;
+                box-shadow:0 0 50px #f5c91a;
+            }
+            to{
+                -webkit-box-shadow:0 0 100px #f5c91a;
+                -moz-box-shadow:0 0 100px #f5c91a;
+                -o-box-shadow:0 0 100px #f5c91a;
+                box-shadow:0 0 100px #f5c91a;
+            }
+        }
+        @-o-keyframes sunFire{
+            form{
+                -webkit-box-shadow:0 0 50px #f5c91a;
+                -moz-box-shadow:0 0 50px #f5c91a;
+                -o-box-shadow:0 0 50px #f5c91a;
+                box-shadow:0 0 50px #f5c91a;
+            }
+            to{
+                -webkit-box-shadow:0 0 100px #f5c91a;
+                -moz-box-shadow:0 0 100px #f5c91a;
+                -o-box-shadow:0 0 100px #f5c91a;
+                box-shadow:0 0 100px #f5c91a;
+            }
+        }
+        @keyframes sunFire{
+            form{
+                -webkit-box-shadow:0 0 50px #f5c91a;
+                -moz-box-shadow:0 0 50px #f5c91a;
+                -o-box-shadow:0 0 50px #f5c91a;
+                box-shadow:0 0 50px #f5c91a;
+            }
+            to{
+                -webkit-box-shadow:0 0 100px #f5c91a;
+                -moz-box-shadow:0 0 100px #f5c91a;
+                -o-box-shadow:0 0 100px #f5c91a;
+                box-shadow:0 0 100px #f5c91a;
+            }
+        }
+        
+        @-webkit-keyframes spin{
+            from{transform:rotate(0);}
+            to{transform: rotate(360deg);}
+        }
+        @-moz-keyframes spin{
+            from{transform:rotate(0);}
+            to{transform: rotate(360deg);}
+        }
+        @-o-keyframes spin{
+            from{transform:rotate(0);}
+            to{transform: rotate(360deg);}
+        }
+        @keyframes spin{
+            from{transform:rotate(0);}
+            to{transform: rotate(360deg);}
+        }
+        
+        html,body{
+            width:100%;
+            height:100%;
+            
+        }
+        
+        #universe{
+            background: black;
+            background: -webkit-radial-gradient(#555,#000);
+            background: -moz-radial-gradient(#555,#000);
+            background: -o-radial-gradient(#555,#000);
+            background: radial-gradient(#555,#000);
+        }
+       
+        #stars{
+            position: relative;
+            z-index: 4;
+            width:100%;
+            height:100%;
+            background: url("stars.png");
+            background-size: cover;
+            
+            /*-webkit-animation:starPulse 4s infinite alternate;
+            -moz-animation:starPulse 4s infinite alternate;
+            -o-animation:starPulse 4s infinite alternate;
+            animation:starPulse 4s infinite alternate;*/
+            
+        }
+    
+        #sun{
+            position: absolute;
+            z-index: 3;
+            top:50%;
+            left:50%;
+            height:200px;
+            width:200px;
+            background: orange;
+            
+            margin-top:-100px;
+            margin-left:-100px;
+            
+            -webkit-border-radius:500px;
+            -moz-border-radius:500px;
+            -o-border-radius:500px;
+            border-radius:500px;
+            
+            
+            background: -webkit-radial-gradient(#f5c313,#ec7e08);
+            background: -moz-radial-gradient(#f5c313,#ec7e08);
+            background: -o-radial-gradient(#f5c313,#ec7e08);
+            background: radial-gradient(#f5c313,#ec7e08);
+            
+            
+            -webkit-box-shadow:0 0 50px #f5c91a;
+            -moz-box-shadow:0 0 50px #f5c91a;
+            -o-box-shadow:0 0 50px #f5c91a;
+            box-shadow:0 0 50px #f5c91a;
+            
+            -webkit-animation:sunFire 4s infinite alternate;
+            -moz-animation:sunFire 4s infinite alternate;
+            -o-animation:sunFire 4s infinite alternate;
+            animation:sunFire 4s infinite alternate;
+        }
+        #sun:hover{
+            height: 300px;
+            width: 300px;
+        }
+        
+        /*讓軌道動*/
+        #earthOrbit{
+            border: solid 1px white;
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-top:-350px;
+            margin-left:-300px;
+            z-index:4;
+            width:600px;
+            height:700px;
+            
+            -webkit-border-radius:100%;
+            -moz-border-radius:100%;
+            -o-border-radius:100%;
+            border-radius:100%;
+            
+            -webkit-animation: spin 30s linear infinite; /*linear為速度不變*/
+            -moz-animation: spin 30s linear infinite;
+            -o-animation: spin 30s linear infinite;
+            animation: spin 30s linear infinite;
+            
+        }
+        
+        #earth{
+            position:absolute;
+            top:50%;
+            left:0;
+            margin-top:  -40px;
+            
+            -webkit-animation: spin 4s linear infinite; 
+            -moz-animation: spin 4s linear infinite;
+            -o-animation: spin 4s linear infinite;
+            animation: spin 4s linear infinite;
+        }
+        /*讓月亮動*/
+        #moonOrbit{
+            border:solid 1px white;
+            
+            height:120px;
+            width:120px;
+            position:absolute;
+            z-index:4;
+            top:50%;
+            left:-20px;
+            margin-top:-60px;
+            
+            -webkit-border-radius:100%;
+            -moz-border-radius:100%;
+            -o-border-radius:100%;
+            border-radius:100%;
+            
+            -webkit-animation: spin 4s linear infinite; 
+            -moz-animation: spin 4s linear infinite;
+            -o-animation: spin 4s linear infinite;
+            animation: spin 4s linear infinite;
+        }
+        
+        #moon{
+            height:30px;
+            width: 30px;
+            background: gray;
+            background: -webkit-radial-gradient(#ddd,#888);
+            background: -moz-radial-gradient(#ddd,#888);
+            background: -o-radial-gradient(#ddd,#888);
+            background: radial-gradient(#ddd,#888);
+            
+            -webkit-border-radius:100%;
+            -moz-border-radius:100%;
+            -o-border-radius:100%;
+            border-radius:100%;
+            
+        }
+        /*讓超人動*/
+        #sunOrbit{
+            border:solid 1px white;
+            position: absolute;
+            height:300px;
+            width:300px;
+            top:50%;
+            left:50%;
+            margin-left: -150px;
+            margin-top:-150px;
+            
+            -webkit-border-radius:100%;
+            -moz-border-radius:100%;
+            -o-border-radius:100%;
+            border-radius:100%;
+            
+            -webkit-animation: spin 4s linear infinite; 
+            -moz-animation: spin 4s linear infinite;
+            -o-animation: spin 4s linear infinite;
+            animation: spin 4s linear infinite;
+        }
+        
+        #superman{
+            /*transform:skewX(-20deg);*/
+            transform-origin:left;
+            transform:skewX(-15deg);
+        }
+        
+    </style>
+</head>
+<body id="universe">
+
+    <div id="stars"><div/>
+    <div id="sun"></div>
+    <div id="earthOrbit">
+        <img src="Earth.png" width="80px" height="80px" id="earth">    
+        <div id="moonOrbit">
+            <div id="moon"></div>
+        </div>
+    </div>
+    </div>    
+    
+    <div id="sunOrbit">
+                <img src="superman.png" width="80px" height="100px" id="superman"> 
+    </div>
+
+</body>
+</html>
